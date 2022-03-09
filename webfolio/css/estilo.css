@@ -1,0 +1,117 @@
+:root {
+
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+.superior {
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    z-index: 2;
+    background-color: burlywood;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 10px 350px;
+}
+.superior .logo {
+    width: 60px;
+    background-color: aquamarine;
+    border-radius: 50%;
+}
+.superior #menu {
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+a {
+    text-decoration: none;
+}
+header {
+    background-color: aquamarine ;
+    width: 100%;
+    height: 100vh;
+}
+/*TRABAJOS----------------------------*/
+#trabajos {
+    height: 800px;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    padding: 40px 350px;
+    background-color: bisque;
+
+    transition: 1s;
+    
+}
+#trabajos .tarjeta {
+    width: 400px;
+    height: 300px;
+    background-color: cadetblue;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+#trabajos .tarjeta img{
+    height: 300px;
+}
+#trabajos .tarjeta .descripcion{
+    height: 80px;
+    width: 100%;
+    background-color: white;
+    align-self:baseline;
+    padding: 8px;
+
+    display: flex;
+    justify-content: space-between;
+}
+#trabajos .tarjeta .descripcion .texto_descripcion h4{
+    margin: 0;
+}
+#trabajos .tarjeta .descripcion .botones button{
+    height: 35px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+/*CV----------------------------------*/
+.cv_ventana {
+    width: 100%;
+    height: 400vh;
+}
+.cv_tira {
+    height: 100%;
+    width: 400vw;
+    position: sticky;
+    display: flex;
+    pointer-events: none;
+}
+.cv_ventana .cv_tira .seccion_cv {
+    width: 100vw;
+
+}
+
+#seccion_1{
+    background-color: yellow;
+}
+#seccion_2{
+    background-color: orange;
+}
+#seccion_3{
+    background-color: red;
+}
+/*FORM---------------------------------*/
+#contacto {
+    height: 800px;
+    background-color: aquamarine;
+}
