@@ -1,18 +1,24 @@
+html {
+    scroll-behavior: smooth;
+}
 :root {
-
+    --main-color: #fde008;
+    --main-gray: rgb(30, 30, 30);
+    --light-gray: rgb(201, 201, 201);
 }
 * {
     box-sizing: border-box;
 }
 body {
     margin: 0;
+    font-family: Helvetica, sans-serif;
 }
 .superior {
     position: fixed;
     height: 60px;
     width: 100%;
     z-index: 2;
-    background-color: burlywood;
+    background-color: var(--main-color);
 
     display: flex;
     flex-direction: row;
@@ -35,23 +41,40 @@ a {
     text-decoration: none;
 }
 header {
-    background-color: aquamarine ;
+    
+    background-image: url('https://images.unsplash.com/photo-1552588355-23e1b81409cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1378&q=80') ;
+    background-size: cover;
+
     width: 100%;
     height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .cartel {
+    height: 400px;
+    width: 400px;
+    background-color: white;
+    color: black;
+    font-size: 80px;
+    font-weight: 800;
+    position: relative;
+    top: 50px;
+    left: -230px;
+    padding: 20px;
 }
 /*TRABAJOS----------------------------*/
 #trabajos {
     height: 800px;
-    
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
-
     padding: 40px 350px;
-    background-color: bisque;
-
     transition: 1s;
+    background-color: var(--light-gray) ;
     
 }
 #trabajos .tarjeta {
@@ -59,9 +82,12 @@ header {
     height: 300px;
     background-color: cadetblue;
     overflow: hidden;
+    margin: 10px;
 
     display: flex;
     flex-direction: column;
+
+    box-shadow: 0px 1px 15px 3px #888888;
 }
 #trabajos .tarjeta img{
     height: 300px;
@@ -83,24 +109,25 @@ header {
     height: 35px;
     aspect-ratio: 1/1;
     border-radius: 50%;
+    border: none ;
+    background-color: aquamarine;
 }
 /*CV----------------------------------*/
 .cv_ventana {
     width: 100%;
-    height: 400vh;
+    height: calc(300vw - 45px);
+    overflow: hidden;
 }
 .cv_tira {
     height: 100%;
-    width: 400vw;
+    width: calc(300vw - 45px);
     position: sticky;
     display: flex;
     pointer-events: none;
 }
 .cv_ventana .cv_tira .seccion_cv {
-    width: 100vw;
-
+    width: calc(100vw - 15px);
 }
-
 #seccion_1{
     background-color: yellow;
 }
@@ -111,7 +138,21 @@ header {
     background-color: red;
 }
 /*FORM---------------------------------*/
+
 #contacto {
     height: 800px;
-    background-color: aquamarine;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+}
+
+.cajaform {
+    background-image: url('https://indieground.net/wp-content/uploads/2019/07/textures_gluedpaper_main02.jpg');
+    background-size: cover;
+
+    width: 30%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
 }
