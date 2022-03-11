@@ -13,9 +13,13 @@ body {
     margin: 0;
     font-family: Helvetica, sans-serif;
 }
+a {
+    text-decoration: none;
+    color: var(--main-gray);
+}
 .superior {
     position: fixed;
-    height: 60px;
+    /* height: 60px; */
     width: 100%;
     z-index: 2;
     background-color: var(--main-color);
@@ -26,36 +30,33 @@ body {
 
     padding: 10px 350px;
 }
-.superior .logo {
-    width: 60px;
-    background-color: aquamarine;
-    border-radius: 50%;
-}
 .superior #menu {
-    width: 200px;
+    width: 400px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-}
-a {
-    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--main-gray);
 }
 header {
     
     background-image: url('https://images.unsplash.com/photo-1552588355-23e1b81409cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1378&q=80') ;
     background-size: cover;
+    position: relative;
 
     width: 100%;
     height: 100vh;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 header .cartel {
     height: 400px;
-    width: 400px;
+    width: 420px;
     background-color: white;
     color: black;
     font-size: 80px;
@@ -66,6 +67,12 @@ header .cartel {
     padding: 20px;
 }
 /*TRABAJOS----------------------------*/
+#trabajos_ancla {
+    width: 100%;
+    height: 140px;
+    position: absolute;
+    bottom: 0;
+}
 #trabajos {
     height: 800px;
     display: flex;
@@ -74,8 +81,17 @@ header .cartel {
     flex-wrap: wrap;
     padding: 40px 350px;
     transition: 1s;
-    background-color: var(--light-gray) ;
+    background-color: var(--main-gray) ;
     
+}
+.titulo {
+    width: 100%;
+    margin: 20px 4px;
+    font-size: 32px;
+    font-weight: bold;
+}
+.amarillo {
+    color: var(--main-color);
 }
 #trabajos .tarjeta {
     width: 400px;
@@ -87,72 +103,129 @@ header .cartel {
     display: flex;
     flex-direction: column;
 
-    box-shadow: 0px 1px 15px 3px #888888;
+    box-shadow: 0px 1px 15px 3px #000000;
 }
 #trabajos .tarjeta img{
-    height: 300px;
+    width: 100%;
+    height: 225px;
+    object-fit: cover;
 }
 #trabajos .tarjeta .descripcion{
     height: 80px;
     width: 100%;
-    background-color: white;
+    background-color: var(--main-color);
     align-self:baseline;
     padding: 8px;
 
     display: flex;
     justify-content: space-between;
 }
+#trabajos .tarjeta .descripcion .texto_descripcion {
+    width: 75%;
+}
 #trabajos .tarjeta .descripcion .texto_descripcion h4{
     margin: 0;
+
+}
+#trabajos .tarjeta .descripcion .texto_descripcion span{
+    font-size: 13px;
+}
+#trabajos .tarjeta .descripcion .botones {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 #trabajos .tarjeta .descripcion .botones button{
     height: 35px;
     aspect-ratio: 1/1;
     border-radius: 50%;
     border: none ;
-    background-color: aquamarine;
+    background-color: var(--main-gray);
+    color: var(--main-color);
+}
+#git-icon {
+    font-size: 20px;
 }
 /*CV----------------------------------*/
 .cv_ventana {
     width: 100%;
     height: calc(300vw - 45px);
-    overflow: hidden;
+    /* overflow: hidden; */
+}
+.padre_tira {
+    position: sticky;
+    top: 0;
 }
 .cv_tira {
-    height: 100%;
+    height: 100vh;
     width: calc(300vw - 45px);
-    position: sticky;
+    /* position: sticky;
+    top: 0; */
     display: flex;
     pointer-events: none;
+    overflow: hidden;
 }
 .cv_ventana .cv_tira .seccion_cv {
     width: calc(100vw - 15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-#seccion_1{
-    background-color: yellow;
+
+.cv_ventana .cv_tira .seccion_cv .cuadro_centro{
+    width: 80%;
+    height: 600px;
+    background-color: var(--main-gray);
+
 }
-#seccion_2{
-    background-color: orange;
-}
-#seccion_3{
-    background-color: red;
+#seccion{
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 /*FORM---------------------------------*/
 
 #contacto {
     height: 800px;
-    background-color: var(--main-color);
+    background-color: var(--main-gray);
+    padding: 40px 350px;
     display: flex;
+    flex-direction: column;
     justify-content:  center;
     align-items: center;
 }
-
-.cajaform {
+.cajaform_cartel{
     background-image: url('https://indieground.net/wp-content/uploads/2019/07/textures_gluedpaper_main02.jpg');
     background-size: cover;
-
+    position: relative;
     width: 30%;
-    padding: 10px;
+    height: 250px;
     display: flex;
     justify-content: center;
+}
+.cajaform {
+    background-color: var(--main-color);
+    position: absolute;
+    z-index:1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    mix-blend-mode: multiply;
+}
+.form-container {
+    position: absolute;
+    z-index:1;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
