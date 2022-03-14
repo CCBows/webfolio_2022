@@ -26,4 +26,8 @@ $(document).ready (function(){
         console.log(scrolltop);
         console.log(ventana_top);
     });
+
+    $(".burger").click(function(){
+        $(".menu_desplegable").toggleClass("desplegado");
+    });
 });

@@ -19,15 +19,12 @@ a {
 }
 .superior {
     position: fixed;
-    /* height: 60px; */
     width: 100%;
     z-index: 2;
     background-color: var(--main-color);
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
     padding: 10px 350px;
 }
 .superior #menu {
@@ -39,13 +36,30 @@ a {
     font-weight: bold;
     color: var(--main-gray);
 }
+.menu_desplegable {
+    position: fixed;
+    display: none;
+    padding: 10px 10%;
+    width: 100vw;
+    z-index: 1;
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.desplegado {
+    top: 71px;
+}
+.superior .burger {
+    display: none;
+}
 header {
     
     background-image: url('https://images.unsplash.com/photo-1552588355-23e1b81409cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1378&q=80') ;
     background-size: cover;
     position: relative;
 
-    width: 100%;
+    width: 100vw;
     height: 100vh;
 
     display: flex;
@@ -54,11 +68,11 @@ header {
     align-items: center;
 }
 header .cartel {
-    height: 400px;
+    /*height: 400px;*/
     width: 420px;
     background-color: white;
     color: black;
-    font-size: 80px;
+    font-size: 65px;
     font-weight: 800;
     position: relative;
     top: 50px;
@@ -73,12 +87,13 @@ header .cartel {
     bottom: 0;
 }
 #trabajos {
-    height: 800px;
+   /* height: 800px;*/
+   width: 100vw;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-around;
     flex-wrap: wrap;
-    padding: 40px 350px;
+    padding: 40px 12%;
     transition: 1s;
     background-color: var(--main-gray) ;
     
@@ -265,4 +280,47 @@ header .cartel {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+        
+    .superior {
+        width: 100vw;
+        align-items: center;
+        padding: 10px 3%;
+    }
+    .superior #menu {
+       display: none;
+    }
+    .superior .burger {
+        display: block;
+    }
+    .superior .logo {
+        width: 20%;
+        overflow: hidden;
+    }
+    .superior .logo img{
+        width: 100%;
+    }
+    /*HEADER*/
+    header .cartel {
+        /*height: 400px;*/
+        width: 85%;
+        font-size: 65px;
+        font-weight: 800;
+        position: relative;
+        top: 50px;
+        left: -2%;
+        padding: 20px;
+    }
+
+    /*FORM*/
+    #contacto {
+        height: 600px;
+        padding: 40px 5%;
+    }
+    .cajaform_cartel{
+        width: 80%;
+        height: 250px;
+    }
 }
