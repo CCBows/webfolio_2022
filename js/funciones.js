@@ -30,4 +30,7 @@ $(document).ready (function(){
     $(".burger").click(function(){
         $(".menu_desplegable").toggleClass("desplegado");
     });
+
+    
+
 });

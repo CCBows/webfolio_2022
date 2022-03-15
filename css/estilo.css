@@ -12,10 +12,18 @@ html {
 body {
     margin: 0;
     font-family: Helvetica, sans-serif;
+    background-color: var(--main-color);
 }
 a {
     text-decoration: none;
     color: var(--main-gray);
+}
+a i {
+   
+    color: var(--main-color);
+}
+#git-icon {
+    font-size: 20px;
 }
 .superior {
     position: fixed;
@@ -159,18 +167,16 @@ header .cartel {
     background-color: var(--main-gray);
     color: var(--main-color);
 }
-#git-icon {
-    font-size: 20px;
-}
+
 /*CV----------------------------------*/
 .cv_ventana {
     width: 100%;
     height: calc(300vw - 45px);
-    /* overflow: hidden; */
 }
 .padre_tira {
     position: sticky;
     top: 0;
+    overflow: hidden;
 }
 .cv_tira {
     height: 100vh;
@@ -313,7 +319,45 @@ header .cartel {
         left: -2%;
         padding: 20px;
     }
+    .titulo {
+        width: 100%;
+        font-size: 24px;
+    }
+    #trabajos {
+        padding: 20px 2%;
+    }
+    #trabajos .tarjeta {
+        width: 98%;
+    }
+    .titulo h3{
+        margin: 0px;
+    }
+    #seccion {
+        justify-content: flex-start;
+    }
+    .cv_ventana{
+        height: calc(600vw - 45px);
+    }
+    .cv_ventana .cv_tira .seccion_cv .cuadro_centro{
+        height: auto;
+        align-content: flex-start;
+        width: 90%;
+        margin-top: 90px ;
+    }
+    .cv_ventana .cv_tira .seccion_cv .cuadro_centro .apartados{
+        flex-wrap: nowrap;
+    }
+    .apartado_cv span{
+        font-size: 16px;
+        margin: 4px 0px;
+        display: none;
+    }
+    .apartado_cv {
+        width: 100%;
+        font-size: 18px;
+        padding: 6px 18px;
 
+    }
     /*FORM*/
     #contacto {
         height: 600px;
